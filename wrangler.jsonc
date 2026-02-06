@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "watch-lake-community-association",
+  "compatibility_date": "2026-02-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+  // Uncomment to add KV, D1, or other Cloudflare bindings:
+  // "kv_namespaces": [
+  //   { "binding": "MY_KV", "id": "<your-kv-namespace-id>" }
+  // ]
+}
