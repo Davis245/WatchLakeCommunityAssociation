@@ -1,4 +1,5 @@
 import ImageScroller from "@/components/ImageScroller";
+import EventsCalendar from "@/components/EventsCalendar";
 
 export default function Home() {
   return (
@@ -96,6 +97,27 @@ export default function Home() {
             veritatis et quasi architecto beatae vitae dicta sunt explicabo.
           </p>
         </div>
+      </section>
+
+      {/* Events Calendar section */}
+      <section
+        style={{
+          backgroundColor: "#f9fafb",
+          padding: "5rem 2rem",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "2rem",
+            fontWeight: 700,
+            color: "#111827",
+            marginBottom: "1.5rem",
+            textAlign: "center",
+          }}
+        >
+          Events Calendar
+        </h2>
+        <EventsCalendar />
       </section>
     </>
   );
