@@ -1,5 +1,6 @@
 import ImageScroller from "@/components/ImageScroller";
 import EventsCalendar from "@/components/EventsCalendar";
+import BookingCards from "@/components/BookingCards";
 
 export default function Home() {
   return (
@@ -118,6 +119,16 @@ export default function Home() {
           Events Calendar
         </h2>
         <EventsCalendar />
+      </section>
+
+      {/* Booking cards section */}
+      <section
+        style={{
+          backgroundColor: "#ffffff",
+          padding: "5rem 2rem",
+        }}
+      >
+        <BookingCards />
       </section>
     </>
   );

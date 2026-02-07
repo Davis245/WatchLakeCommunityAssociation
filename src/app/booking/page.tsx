@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   description: "Reserve a community space or sign up for an upcoming event.",
 };
 
-export default function BookingPage() {
+export default async function BookingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string }>;
+}) {
+  const { service } = await searchParams;
+
   return (
     <section className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-3xl font-bold">Book a Space or Event</h1>
@@ -15,7 +21,7 @@ export default function BookingPage() {
       </p>
 
       <div className="mt-8">
-        <SimplyBookWidget />
+        <SimplyBookWidget service={service} />
       </div>
     </section>
   );

@@ -14,9 +14,11 @@ import { useEffect } from "react";
 interface SimplyBookWidgetProps {
   /** Override the company login (defaults to env var) */
   company?: string;
+  /** Pre-select a specific service/event by ID */
+  service?: string;
 }
 
-export default function SimplyBookWidget({ company }: SimplyBookWidgetProps) {
+export default function SimplyBookWidget({ company, service }: SimplyBookWidgetProps) {
   const companyLogin =
     company ?? process.env.NEXT_PUBLIC_SIMPLYBOOK_COMPANY ?? "";
 
@@ -50,6 +52,7 @@ export default function SimplyBookWidget({ company }: SimplyBookWidgetProps) {
           display_item_mode: "block",
         },
         container_id: "simplybook-widget-container",
+        ...(service ? { navigate: "book", service } : {}),
       });
     };
     document.body.appendChild(script);
